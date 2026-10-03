@@ -556,6 +556,13 @@
         "runemaster-audit-2734-runic-obliteration"
       ],
       "args": []
+    },
+    {
+      "script": "check_chronomancer_pure_chaos.py",
+      "scenarios": [
+        "chronomancer-pure-chaos-time-loop"
+      ],
+      "args": []
     }
   ]
 }

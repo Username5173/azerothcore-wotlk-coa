@@ -120,6 +120,7 @@ def main():
         else:
             flags = ['-std=c++20', '-Wall', '-Wextra', '-Werror', '-Wno-unused-const-variable',
                      *['-I' + str(p) for p in includes], str(cpp), '-o', str(executable)]
+        flags.append(str(ROOT / "src/common/Utilities/Tokenize.cpp"))
         subprocess.run([compiler, *flags], cwd=out, check=True)
         return subprocess.run([str(executable)], cwd=out).returncode
 
